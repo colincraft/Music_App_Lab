@@ -1,0 +1,82 @@
+Research Answers
+///////////
+///////////
+What are some books that Martin Fowler has written?
+- NoSQL Distilled
+- DOmain Specific Languages
+- Refactoring
+- Patterns of Enterprise Application Architecture
+- UML Distilled
+- Refactoring Ruby Edition
+- Analysis Patterns
+- Planning Extreme Programming
+
+
+What's the difference between "active record" and "ActiveRecord"?
+Active record is the M in MVC, the model. It represents business data and logic. It is an implementation of the Active Record Pattern which is a description of the Object Relational Mapping system. 
+
+ActiveRecord is the term we use in code to create models.
+
+
+Is the "active record" pattern an ORM?
+
+Yes.
+
+
+Why might we want to use an ORM in our code?
+
+To simply refer to database tables without having to write specifc SQL code. It's great in case we have table name changes, because we won't need to rewrite all of our SQL statements.
+
+What gem do we need to allow Sinatra to interact with ActiveRecord?
+
+Sinatra-activerecord
+
+What is rake?
+
+Rake's provide the ability to use migrations in Rails. To use in sinatra, we must include the gem Rake.
+
+What is a database migration?
+
+Database migration is a kind of version control, similar to github, but more directly with your code.
+
+What command can we use to create a new ActiveRecord migration?
+
+rake: db:create_migration NAME=name, VALUE=value
+
+What command runs our existing migrations?
+
+rake db:migrate
+
+What commands reverses a migration?
+
+rake db:rollback
+
+What command tells us which migrations have run and which have not?
+
+rake db:migrate:status
+
+Which class do we have to extend if we want to create a new model?
+
+class Class_name < ActiveRecord::Base
+end
+
+What's the difference between ActiveRecord's .new and .create methods?
+
+They both do the same thing, but create will create and save a new method into the database. While new will just create but not save it.
+
+
+What's the difference between ActiveRecord's .find and .find_by methods?
+
+.find_by finds by specific id's, while find can take in several various arguments including first, last, all.
+
+What's the difference between ActiveRecord's .find_by and .where methods?
+
+Where will return all instances that match the parameter, while find_by only returns the first one.
+
+What ActiveRecord method do we use to change a value in the database?
+
+.update
+
+What ActiveRecord method do we use to remove an item from the database?
+
+.destroy
