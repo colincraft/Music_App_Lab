@@ -1,0 +1,11 @@
+<form action="/artists/<%= @artists.id%>" method="POST">
+<input type="hidden" name="_method" value="put">
+<label for="name">Artist: </label>
+  <input type="text" name="name" id="name" value="<%= @artists.name %>">
+  <input type="submit" value="Edit">
+</form>
+
+<form action="/artists/<%= @artists.id%>" method="POST">
+<input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
